@@ -1,5 +1,5 @@
-var tabButtons=document.querySelectorAll(".tabContainer .buttonContainer button");
-var tabPanels=document.querySelectorAll(".tabContainer .tabPanel");
+var tabButtons = document.querySelectorAll(".tabContainer .buttonContainer button");
+var tabPanels = document.querySelectorAll(".tabContainer .tabPanel");
 
 function showPanel(panelIndex,colorCode){
     tabButtons.forEach(function(node){
@@ -15,3 +15,12 @@ function showPanel(panelIndex,colorCode){
     tabPanels[panelIndex].style.backgroundColor=colorCode;
 }
 showPanel(0,'#f44336');
+
+function refresh(){
+    location.reload();
+}
+
+let btnBack =  document.querySelector(".Navigation button[type='button']")
+btnBack.addEventListener('click', ()=>{
+    window.history.back();
+});
